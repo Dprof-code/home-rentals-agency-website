@@ -28,7 +28,7 @@ This is a simple portfolio project and its also inspired by a Twitter code chall
 ### Links
 
 - Code Repo URL: [https://github.com/Dprof-code/home-rentals-agency-website]
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://rentals-hub.netlify.app]
 
 ## My process
 

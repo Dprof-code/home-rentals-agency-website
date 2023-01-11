@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Rentals Agency</title>
+    <script
+      src="https://kit.fontawesome.com/a70a0df8ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500&family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
@@ -12,6 +26,614 @@
     <link rel="stylesheet" type="text/css" href="/files/css/styles.css" />
   </head>
   <body>
-    <h1>HOME RENTALS AGENCY WEBSITE</h1>
+    <!--Header section starts here-->
+    <header>
+      <img src="/files/images/logo.png" class="logo" alt="website-logo" />
+      <!--Menu section starts here-->
+      <nav>
+        <ul class="menu-container">
+          <li class="menu-items">Home</li>
+          <li class="menu-items">Landlord</li>
+          <li class="menu-items">Tenants</li>
+          <li class="menu-items">Contact Us</li>
+        </ul>
+      </nav>
+      <span class="material-symbols-outlined"> menu </span>
+      <span class="material-symbols-outlined"> close </span>
+      <!--Menu section ends here-->
+    </header>
+    <!--Header section ends here-->
+    <main>
+      <!--Landing section starts here-->
+      <section class="landing-page">
+        <h1>The Most Affortable Place To Stay In The San Francisco Bay Area</h1>
+        <div class="map-container">
+          <div class="map">
+            <iframe
+              src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1612467.3475148156!2d-123.54158598287158!3d37.875490056248196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1673435534890!5m2!1sen!2sng"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <form>
+            <select name="type">
+              <option value="All Type">All Type</option>
+              <option value="student">Student Residence</option>
+              <option value="homestay">Homestay</option>
+              <option value="co-op">Co-Op (Berkeley Only)</option>
+              <option value="duplex">Duplex</option>
+            </select>
+
+            <select name="location">
+              <option value="neighbourhood">Neighbourhood</option>
+              <option value="china">China Town</option>
+              <option value="north">North Beach</option>
+              <option value="soma">SoMa</option>
+              <option value="pacific">Pacific Heights</option>
+            </select>
+            <div class="search-icon-wrapper">
+              <span class="material-symbols-outlined"> search </span>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!--Landing section ends here-->
+      <!--Features section starts here-->
+      <section class="features">
+        <h2>Minimum Living Cost Takes Care Of Everything</h2>
+        <div class="featured-image">
+          <img
+            src="/files/images/unsplash_oGmf8o53LeE.jpg"
+            alt="home interiors"
+          />
+        </div>
+        <aside class="features-card-container">
+          <div class="feature-card">
+            <img
+              src="/files/icons/Vector.png"
+              class="feature-icon"
+              alt="money icon"
+            />
+            <h3 class="feature-headline">Pay as Little as possible!</h3>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="/files/icons/Vector-2.png"
+              class="feature-icon"
+              alt="building icon"
+            />
+            <h3 class="feature-headline">Enjoy wisdom of community!</h3>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="/files/icons/Vector-5.png"
+              class="feature-icon"
+              alt="layers icon"
+            />
+            <h3 class="feature-headline">
+              Let's somebody else take care of Landlord!
+            </h3>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="/files/icons/Vector-1.png"
+              class="feature-icon"
+              alt="flowers icon"
+            />
+            <h3 class="feature-headline">Enjoy peaceful Environment!</h3>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="/files/icons/Vector-4.png"
+              class="feature-icon"
+              alt="star icon"
+            />
+            <h3 class="feature-headline">Stay Safe! Save Money!</h3>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="/files/icons/Vector-3.png"
+              class="feature-icon"
+              alt="moon icon"
+            />
+            <h3 class="feature-headline">Pay for what you use !</h3>
+          </div>
+        </aside>
+      </section>
+      <!--Features section ends here-->
+      <!--Properties section starts here-->
+      <section class="properties-list">
+        <div class="properties-list-section-header">
+          <h2>list of properties</h2>
+          <button class="view">View All Property</button>
+        </div>
+        <div class="properties-card-container">
+          <div class="property-card">
+            <img
+              src="/files/images/unsplash_Eh_It1hg4Hs.png"
+              class="property-image"
+              alt="house interiors image"
+            />
+            <h3 class="property-address">
+              2578 Folsom Street, San Francisco, CA, 94110
+            </h3>
+            <h4 class="property-type">Private Room</h4>
+            <h4 class="property-price">$1200/Month</h4>
+            <div class="property-features-container">
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path.png"
+                  class="property-feature-icon"
+                  alt="car icon"
+                />
+                <h5>4</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path-1.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Shape.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <img
+              src="/files/images/unsplash_2d4lAQAlbDA.png"
+              class="property-image"
+              alt="house interiors image"
+            />
+            <h3 class="property-address">
+              2578 Folsom Street, San Francisco, CA, 94110
+            </h3>
+            <h4 class="property-type">Private Room</h4>
+            <h4 class="property-price">$1200/Month</h4>
+            <div class="property-features-container">
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path.png"
+                  class="property-feature-icon"
+                  alt="car icon"
+                />
+                <h5>4</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path-1.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Shape.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <img
+              src="/files/images/unsplash_T6d96Qrb5MY.png"
+              class="property-image"
+              alt="house interiors image"
+            />
+            <h3 class="property-address">
+              2578 Folsom Street, San Francisco, CA, 94110
+            </h3>
+            <h4 class="property-type">Private Room</h4>
+            <h4 class="property-price">$1200/Month</h4>
+            <div class="property-features-container">
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path.png"
+                  class="property-feature-icon"
+                  alt="car icon"
+                />
+                <h5>4</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path-1.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Shape.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <img
+              src="/files/images/unsplash_KQgrVfR3r74.png"
+              class="property-image"
+              alt="house interiors image"
+            />
+            <h3 class="property-address">
+              2578 Folsom Street, San Francisco, CA, 94110
+            </h3>
+            <h4 class="property-type">Private Room</h4>
+            <h4 class="property-price">$1200/Month</h4>
+            <div class="property-features-container">
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path.png"
+                  class="property-feature-icon"
+                  alt="car icon"
+                />
+                <h5>4</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path-1.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Shape.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <img
+              src="/files/images/unsplash_UV81E0oXXWQ.png"
+              class="property-image"
+              alt="house interiors image"
+            />
+            <h3 class="property-address">
+              2578 Folsom Street, San Francisco, CA, 94110
+            </h3>
+            <h4 class="property-type">Private Room</h4>
+            <h4 class="property-price">$1200/Month</h4>
+            <div class="property-features-container">
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path.png"
+                  class="property-feature-icon"
+                  alt="car icon"
+                />
+                <h5>4</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path-1.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Shape.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="property-card">
+            <img
+              src="/files/images/unsplash_uDtC-1NLEzU.png"
+              class="property-image"
+              alt="house interiors image"
+            />
+            <h3 class="property-address">
+              2578 Folsom Street, San Francisco, CA, 94110
+            </h3>
+            <h4 class="property-type">Private Room</h4>
+            <h4 class="property-price">$1200/Month</h4>
+            <div class="property-features-container">
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path.png"
+                  class="property-feature-icon"
+                  alt="car icon"
+                />
+                <h5>4</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Path-1.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+              <div class="property-feature">
+                <img
+                  src="/files/icons/Shape.png"
+                  class="property-feature-icon"
+                  alt=" icon"
+                />
+                <h5>2</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="pagination">
+          <button id="first">First</button>
+          <ul class="pages">
+            <li class="page-1">1</li>
+            <li class="page-2">2</li>
+            <li class="page-3">3</li>
+          </ul>
+          <button id="next">Next</button>
+        </div>
+      </section>
+      <!--Properties section ends here-->
+      <!--Benefits section starts here-->
+      <section class="benefits">
+        <div class="benefits-cards-container">
+          <div class="benefits-cards">
+            <img
+              src="/files/images/unsplash_nEtpvJjnPVo.jpg"
+              class="benefits-card-image"
+              alt="bedroom image"
+            />
+            <h3 class="benefit-card-caption">Flexible Leases</h3>
+          </div>
+          <div class="benefits-cards">
+            <img
+              src="/files/images/Image 2.jpg"
+              class="benefits-card-image"
+              alt="man smiling"
+            />
+            <h3 class="benefit-card-caption">7-Day Happiness Guaranteed</h3>
+          </div>
+          <div class="benefits-cards">
+            <img
+              src="/files/images/unsplash_uooMllXe6gE.jpg"
+              class="benefits-card-image"
+              alt="cleaning equipments"
+            />
+            <h3 class="benefit-card-caption">Monthly House Cleaning</h3>
+          </div>
+          <div class="benefits-cards">
+            <img
+              src="/files/images/unsplash_XdWkFaHI97c.jpg"
+              class="benefits-card-image"
+              alt="people sitting down"
+            />
+            <h3 class="benefit-card-caption">Choose Your Own Roommate</h3>
+          </div>
+        </div>
+        <div class="benefits-header-container">
+          <h2 class="benefits-headline">
+            Flexibility and options to suit your lifestyle.
+          </h2>
+          <p class="benefits-desc">
+            You need it? We got it. We make finding your next home easy,
+            comfortable, and simple. From our happiness guarantee to our
+            selective roommate finder option. We provide you the flexibility
+            that you most desire.
+          </p>
+          <button class="search">Search Rooms</button>
+        </div>
+      </section>
+      <!--Benefits section ends here-->
+      <!--Form section starts here-->
+      <section class="order-section">
+        <h3 class="form-tagline">
+          Your property with us and be Confident that Your Room will be Filled
+          Out!
+        </h3>
+
+        <div class="form-container">
+          <h3 class="form-headline">Add A New Property</h3>
+          <form action="#">
+            <div>
+              <label>Name <span class="required-symbol">*</span></label>
+              <input type="text" placeholder="Enter Name" required />
+            </div>
+
+            <div>
+              <label>Address <span class="required-symbol">*</span></label>
+              <input type="text" placeholder="Enter Address" required />
+            </div>
+
+            <div>
+              <label>Unit Number <span class="required-symbol">*</span></label>
+              <input type="text" placeholder="Enter Unit" required />
+            </div>
+
+            <div>
+              <label>City <span class="required-symbol">*</span></label>
+              <select name="city">
+                <option value="select-city">Select City</option>
+                <option value="alameda">Alameda</option>
+                <option value="berkeley">Berkeley</option>
+                <option value="calistoga">Calistoga</option>
+                <option value="fremont">Fremont</option>
+              </select>
+            </div>
+
+            <div>
+              <label>State <span class="required-symbol">*</span></label>
+              <select name="state">
+                <option value="select-state">Select State</option>
+                <option value="california">California</option>
+                <option value="texas">Texas</option>
+                <option value="florida">Florida</option>
+                <option value="ohio">Ohio</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Room Type <span class="required-symbol">*</span></label>
+              <select name="room-type">
+                <option value="select-room">Select Room Type</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+                <option value="house">House</option>
+                <option value="studio">Studio</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Price <span class="required-symbol">*</span></label>
+              <input type="number" placeholder="Enter Price" required />
+            </div>
+
+            <div>
+              <label>Room Type <span class="required-symbol">*</span></label>
+              <select name="room-type">
+                <option value="select-room">Select Room Type</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+                <option value="house">House</option>
+                <option value="studio">Studio</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Description <span class="required-symbol">*</span></label>
+              <textarea placeholder="Enter Description"></textarea>
+            </div>
+
+            <div>
+              <label>Upload Photos</label>
+              <div class="upload-image-container">
+                <p class="upload-headline">
+                  Drag your images here, or <span class="browse">browse</span>
+                </p>
+                <p class="upload-sub-headline">Supported: JPG, JPEG, PNG</p>
+              </div>
+              <input type="file" name="filename" />
+            </div>
+
+            <button class="add-btn">Add New Property</button>
+          </form>
+        </div>
+      </section>
+      <!--Form section ends here-->
+      <!--Reviews section starts here-->
+      <section class="reviews">
+        <div class="feedback-container">
+          <blockquote class="feedback">
+            <span class="quote">"</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel
+            pellentesque est. Curabitur at odio sit amet libero vulputate
+            efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa,
+            faucibus id pretium ac, mattis eu velit. Donec sed risus a lacus
+            fringilla finibus.
+          </blockquote>
+          <div class="client-details">
+            <div class="client-pics-container">
+              <img
+                src="/files/images/Ellipse 4.png"
+                class="client-profile-pics"
+                alt="a man"
+              />
+            </div>
+            <div class="client-bio">
+              <h4 class="client-name">Harry Wilson</h4>
+              <h4 class="client-title">Property Owner</h4>
+            </div>
+          </div>
+
+          <div id="swipe-buttons">
+            <button id="first"></button>
+            <button id="second"></button>
+            <button id="third"></button>
+          </div>
+        </div>
+
+        <div class="video-playback">
+          <img
+            class="cover-img"
+            src="/files/images/cover.jpg"
+            alt="cover-image"
+          />
+          <div class="play-icon-wrapper">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+      </section>
+      <!--Reviews section ends here-->
+    </main>
+    <footer>
+      <div class="contact-us">
+        <div class="logo">Logo</div>
+        <div class="contact-details">
+          <div class="contact-address">
+            <p>
+              <span class="material-symbols-outlined"> location_on </span> 345
+              Faulconer Drive, Suite 4 • Charlottesville, CA, 12345
+            </p>
+
+            <p>
+              <span class="material-symbols-outlined"> call </span>(123)
+              456-7890
+            </p>
+            <p>
+              <span class="material-symbols-outlined"> print </span> (123)
+              456-7890
+            </p>
+          </div>
+          <div class="socials">
+            <h4 class="socials-headline">Social Media</h4>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fas fa-rss"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <ul class="menu-items-container">
+          <li class="menu-item">ABOUT US</li>
+          <li class="menu-item">CONTACT US</li>
+          <li class="menu-item">HELP</li>
+          <li class="menu-item">PRIVACY POLICY</li>
+          <li class="menu-item">DISCLAIMER</li>
+        </ul>
+        <p class="copyright">
+          Copyright &copy; 2020 Minimum Living Cost. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/files/js/script.js"></script>
   </body>
 </html>

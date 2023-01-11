@@ -1,3 +1,16 @@
+:root {
+  --mainFont: "Inter", sans-serif;
+  --primaryColor: #f4511e;
+  --white: #ffffff;
+  --grey: #18191f;
+  --lightGrey: #818181;
+  --form: #252b42;
+  --secondForm: #737373;
+  --muted: #bdbdbd;
+  --dark: #0a142f;
+  --black: #000000;
+}
+
 html {
   box-sizing: border-box;
   margin: 0;
