@@ -30,7 +30,7 @@ header {
   padding-bottom: 1rem;
   margin: 0 auto;
   border-bottom: 0.5px solid #fff;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu-container {
@@ -79,17 +79,29 @@ header {
   right: 0;
 }
 
+.landing-page::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  content: " ";
+  z-index: 1;
+}
+
 .landing-page-contents {
-  width: 1200px;
+  position: relative;
+  max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 
 h1 {
-  width: 584px;
   font-family: var(--mainFont);
   font-style: normal;
   font-weight: 700;
@@ -145,4 +157,8 @@ form {
 .fa-search {
   cursor: pointer;
   color: var(--white);
+}
+
+.features {
+  z-index: 10;
 }
