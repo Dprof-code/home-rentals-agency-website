@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Rentals Agency</title>
+    <title>Portfolio Project | Home Rentals Agency</title>
     <script
       src="https://kit.fontawesome.com/a70a0df8ef.js"
       crossorigin="anonymous"
@@ -32,53 +32,57 @@
       <!--Menu section starts here-->
       <nav>
         <ul class="menu-container">
-          <li class="menu-items">Home</li>
-          <li class="menu-items">Landlord</li>
-          <li class="menu-items">Tenants</li>
-          <li class="menu-items">Contact Us</li>
+          <li><a class="active menu-items" href="#">Home</a></li>
+          <li><a class="menu-items" href="#">Landlord</a></li>
+          <li><a class="menu-items" href="#">Tenants</a></li>
+          <li><a class="menu-items" href="#">Contact Us</a></li>
         </ul>
       </nav>
-      <span class="material-symbols-outlined"> menu </span>
-      <span class="material-symbols-outlined"> close </span>
+      <i class="fas fa-bars"></i>
       <!--Menu section ends here-->
     </header>
     <!--Header section ends here-->
     <main>
       <!--Landing section starts here-->
       <section class="landing-page">
-        <h1>The Most Affortable Place To Stay In The San Francisco Bay Area</h1>
-        <div class="map-container">
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1612467.3475148156!2d-123.54158598287158!3d37.875490056248196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1673435534890!5m2!1sen!2sng"
-              width="400"
-              height="300"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <form>
-            <select name="type">
-              <option value="All Type">All Type</option>
-              <option value="student">Student Residence</option>
-              <option value="homestay">Homestay</option>
-              <option value="co-op">Co-Op (Berkeley Only)</option>
-              <option value="duplex">Duplex</option>
-            </select>
-
-            <select name="location">
-              <option value="neighbourhood">Neighbourhood</option>
-              <option value="china">China Town</option>
-              <option value="north">North Beach</option>
-              <option value="soma">SoMa</option>
-              <option value="pacific">Pacific Heights</option>
-            </select>
-            <div class="search-icon-wrapper">
-              <span class="material-symbols-outlined"> search </span>
+        <div class="landing-page-contents">
+          <h1>
+            The Most Affortable Place To Stay In The San Francisco Bay Area
+          </h1>
+          <div class="map-container">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1612467.3475148156!2d-123.54158598287158!3d37.875490056248196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808583a3a688d7b5%3A0x8c891b8457461fa9!2sSan%20Francisco%20Bay%20Area%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1673435534890!5m2!1sen!2sng"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
-          </form>
+            <form>
+              <select class="search-drop" name="type">
+                <option value="All Type">All Type</option>
+                <option value="student">Rental</option>
+                <option value="homestay">Homestay</option>
+                <option value="co-op">Land</option>
+                <option value="duplex">Duplex</option>
+              </select>
+
+              <select class="search-drop" name="location">
+                <option value="neighbourhood">Neighbourhood</option>
+                <option value="china">China Town</option>
+                <option value="north">North Beach</option>
+                <option value="soma">SoMa</option>
+                <option value="pacific">Pacific Heights</option>
+              </select>
+
+              <span class="search-icon-wrapper">
+                <i class="fas fa-search"></i>
+              </span>
+            </form>
+          </div>
         </div>
       </section>
       <!--Landing section ends here-->
