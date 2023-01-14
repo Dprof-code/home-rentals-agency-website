@@ -194,14 +194,13 @@ form {
 
 .features-card-container {
   margin-top: 5%;
-  width: 600px;
+  width: 1000px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .feature-card {
-  width: 200px;
-  flex: 0 0 calc(33%);
+  flex: 0 0 calc(33.3%);
 }
 
 .feature-icon {
