@@ -69,6 +69,7 @@ header {
 
 main {
   width: 100%;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -82,14 +83,12 @@ main {
 }
 
 .landing-page::after {
-  width: 100%;
-  height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   content: " ";
   z-index: 1;
 }
@@ -114,12 +113,11 @@ h1 {
   letter-spacing: -1px;
   text-transform: capitalize;
   color: var(--white);
-  width: 600px;
 }
 
 .map {
-  width: auto;
-  height: 320px;
+  width: 408px;
+  height: 340px;
   margin-bottom: 21px;
   box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
@@ -130,12 +128,11 @@ iframe {
 }
 
 form {
+  box-sizing: border-box;
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 15px;
-  box-sizing: border-box;
-  width: auto;
 }
 
 .search-drop {
@@ -146,122 +143,21 @@ form {
   line-height: 28px;
   letter-spacing: 0.2px;
   color: #252b42;
-  padding: 1rem 0.4rem;
+  padding: 1rem;
   box-sizing: border-box;
+  margin-right: 0;
   cursor: pointer;
 }
 
 .search-icon-wrapper {
-  width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 0px 5px 5px 0px;
 
-  padding: 1.2rem;
+  padding: 1rem;
   background-color: #23a6f0;
 }
 
 .fa-search {
   cursor: pointer;
   color: var(--white);
-}
-
-.features-content-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.features-header {
-  margin-left: 3rem;
-  font-family: var(--mainFont);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 64px;
-  text-align: left;
-  text-transform: capitalize;
-  font-feature-settings: "salt" on, "liga" off;
-
-  color: #18191f;
-}
-
-.underline {
-  border-bottom: 3px solid #f4511e;
-}
-
-.features-contents {
-  display: flex;
-}
-
-.features-card-container {
-  margin-top: 5%;
-  width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.feature-card {
-  width: 200px;
-  flex: 0 0 calc(33%);
-}
-
-.feature-icon {
-  background: #ffffff;
-  box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  padding: 22px 20px;
-}
-
-.feature-headline {
-  font-family: var(--mainFont);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
-  text-transform: capitalize;
-  font-feature-settings: "salt" on, "liga" off;
-
-  color: #18191f;
-}
-
-.properties-list {
-  background-color: #f5f5f5;
-  padding: 60px 150px;
-}
-
-.properties-list-section-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.properties-header {
-  font-family: var(--mainFont);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 64px;
-
-  text-transform: capitalize;
-  font-feature-settings: "salt" on, "liga" off;
-  color: #18191f;
-  margin: 0;
-}
-
-.view {
-  float: right;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 23px;
-  text-align: center;
-  color: #ffffff;
-  background: var(--primaryColor);
-  box-shadow: 0px 20px 13px rgba(248, 90, 71, 0.035),
-    0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
-    0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0 34px;
-  border: 0;
-  outline: 0;
 }

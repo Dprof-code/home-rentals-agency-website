@@ -19,10 +19,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
+
     <link rel="stylesheet" type="text/css" href="/files/css/styles.css" />
   </head>
   <body>
@@ -47,7 +44,7 @@
       <section class="landing-page">
         <div class="landing-page-contents">
           <h1>
-            The Most Affortable Place To Stay In The San Francisco Bay Area
+            The Most Affordable Place To Stay In The San Francisco Bay Area
           </h1>
           <div class="map-container">
             <div class="map">
@@ -64,8 +61,9 @@
             <form>
               <select class="search-drop" name="type">
                 <option value="All Type">All Type</option>
-                <option value="student">Rental</option>
+                <option value="rental">Rental</option>
                 <option value="homestay">Homestay</option>
+                <option value="student">Student Residences</option>
                 <option value="co-op">Land</option>
                 <option value="duplex">Duplex</option>
               </select>
@@ -88,76 +86,84 @@
       <!--Landing section ends here-->
       <!--Features section starts here-->
       <section class="features">
-        <h2>Minimum Living Cost Takes Care Of Everything</h2>
-        <div class="featured-image">
-          <img
-            src="/files/images/unsplash_oGmf8o53LeE.jpg"
-            alt="home interiors"
-          />
+        <div class="features-content-container">
+          <h2 class="features-header">
+            <span class="underline">Minimum Living Cost</span> Takes Care Of
+            Everything
+          </h2>
+          <div class="features-contents">
+            <div class="featured-image-container">
+              <img
+                class="featured-image"
+                src="/files/images/unsplash_oGmf8o53LeE.png"
+                alt="home interiors"
+              />
+            </div>
+            <aside class="features-card-container">
+              <div class="feature-card">
+                <img
+                  src="/files/icons/Vector.png"
+                  class="feature-icon"
+                  alt="money icon"
+                />
+                <h3 class="feature-headline">Pay as Little as possible!</h3>
+              </div>
+
+              <div class="feature-card">
+                <img
+                  src="/files/icons/Vector-2.png"
+                  class="feature-icon"
+                  alt="building icon"
+                />
+                <h3 class="feature-headline">Enjoy wisdom of community!</h3>
+              </div>
+
+              <div class="feature-card">
+                <img
+                  src="/files/icons/Vector-5.png"
+                  class="feature-icon"
+                  alt="layers icon"
+                />
+                <h3 class="feature-headline">
+                  Let's somebody else take care of Landlord!
+                </h3>
+              </div>
+
+              <div class="feature-card">
+                <img
+                  src="/files/icons/Vector-1.png"
+                  class="feature-icon"
+                  alt="flowers icon"
+                />
+                <h3 class="feature-headline">Enjoy peaceful Environment!</h3>
+              </div>
+
+              <div class="feature-card">
+                <img
+                  src="/files/icons/Vector-4.png"
+                  class="feature-icon"
+                  alt="star icon"
+                />
+                <h3 class="feature-headline">Stay Safe! Save Money!</h3>
+              </div>
+
+              <div class="feature-card">
+                <img
+                  src="/files/icons/Vector-3.png"
+                  class="feature-icon"
+                  alt="moon icon"
+                />
+                <h3 class="feature-headline">Pay for what you use !</h3>
+              </div>
+            </aside>
+          </div>
         </div>
-        <aside class="features-card-container">
-          <div class="feature-card">
-            <img
-              src="/files/icons/Vector.png"
-              class="feature-icon"
-              alt="money icon"
-            />
-            <h3 class="feature-headline">Pay as Little as possible!</h3>
-          </div>
-
-          <div class="feature-card">
-            <img
-              src="/files/icons/Vector-2.png"
-              class="feature-icon"
-              alt="building icon"
-            />
-            <h3 class="feature-headline">Enjoy wisdom of community!</h3>
-          </div>
-
-          <div class="feature-card">
-            <img
-              src="/files/icons/Vector-5.png"
-              class="feature-icon"
-              alt="layers icon"
-            />
-            <h3 class="feature-headline">
-              Let's somebody else take care of Landlord!
-            </h3>
-          </div>
-
-          <div class="feature-card">
-            <img
-              src="/files/icons/Vector-1.png"
-              class="feature-icon"
-              alt="flowers icon"
-            />
-            <h3 class="feature-headline">Enjoy peaceful Environment!</h3>
-          </div>
-
-          <div class="feature-card">
-            <img
-              src="/files/icons/Vector-4.png"
-              class="feature-icon"
-              alt="star icon"
-            />
-            <h3 class="feature-headline">Stay Safe! Save Money!</h3>
-          </div>
-
-          <div class="feature-card">
-            <img
-              src="/files/icons/Vector-3.png"
-              class="feature-icon"
-              alt="moon icon"
-            />
-            <h3 class="feature-headline">Pay for what you use !</h3>
-          </div>
-        </aside>
       </section>
       <!--Features section ends here-->
       <!--Properties section starts here-->
       <section class="properties-list">
         <div class="properties-list-section-header">
-          <h2>list of properties</h2>
+          <h2 class="properties-header">list of properties</h2>
           <button class="view">View All Property</button>
         </div>
         <div class="properties-card-container">
