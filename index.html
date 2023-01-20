@@ -401,96 +401,102 @@
       <!--Benefits section ends here-->
       <!--Form section starts here-->
       <section class="order-section">
-        <h3 class="form-tagline">
-          Your property with us and be Confident that Your Room will be Filled
-          Out!
-        </h3>
+        <div class="order-section-container">
+          <h3 class="form-tagline">
+            Your property with us and be Confident that Your Room will be Filled
+            Out!
+          </h3>
 
-        <div class="form-container">
-          <h3 class="form-headline">Add A New Property</h3>
-          <form action="#">
-            <div>
-              <label>Name <span class="required-symbol">*</span></label>
-              <input type="text" placeholder="Enter Name" required />
-            </div>
-
-            <div>
-              <label>Address <span class="required-symbol">*</span></label>
-              <input type="text" placeholder="Enter Address" required />
-            </div>
-
-            <div>
-              <label>Unit Number <span class="required-symbol">*</span></label>
-              <input type="text" placeholder="Enter Unit" required />
-            </div>
-
-            <div>
-              <label>City <span class="required-symbol">*</span></label>
-              <select name="city">
-                <option value="select-city">Select City</option>
-                <option value="alameda">Alameda</option>
-                <option value="berkeley">Berkeley</option>
-                <option value="calistoga">Calistoga</option>
-                <option value="fremont">Fremont</option>
-              </select>
-            </div>
-
-            <div>
-              <label>State <span class="required-symbol">*</span></label>
-              <select name="state">
-                <option value="select-state">Select State</option>
-                <option value="california">California</option>
-                <option value="texas">Texas</option>
-                <option value="florida">Florida</option>
-                <option value="ohio">Ohio</option>
-              </select>
-            </div>
-
-            <div>
-              <label>Room Type <span class="required-symbol">*</span></label>
-              <select name="room-type">
-                <option value="select-room">Select Room Type</option>
-                <option value="apartment">Apartment</option>
-                <option value="condo">Condo</option>
-                <option value="house">House</option>
-                <option value="studio">Studio</option>
-              </select>
-            </div>
-
-            <div>
-              <label>Price <span class="required-symbol">*</span></label>
-              <input type="number" placeholder="Enter Price" required />
-            </div>
-
-            <div>
-              <label>Room Type <span class="required-symbol">*</span></label>
-              <select name="room-type">
-                <option value="select-room">Select Room Type</option>
-                <option value="apartment">Apartment</option>
-                <option value="condo">Condo</option>
-                <option value="house">House</option>
-                <option value="studio">Studio</option>
-              </select>
-            </div>
-
-            <div>
-              <label>Description <span class="required-symbol">*</span></label>
-              <textarea placeholder="Enter Description"></textarea>
-            </div>
-
-            <div>
-              <label>Upload Photos</label>
-              <div class="upload-image-container">
-                <p class="upload-headline">
-                  Drag your images here, or <span class="browse">browse</span>
-                </p>
-                <p class="upload-sub-headline">Supported: JPG, JPEG, PNG</p>
+          <div class="form-container">
+            <h3 class="form-headline">Add A New Property</h3>
+            <form action="#">
+              <div>
+                <label>Name <span class="required-symbol">*</span></label>
+                <input type="text" placeholder="Enter Name" required />
               </div>
-              <input type="file" name="filename" />
-            </div>
 
-            <button class="add-btn">Add New Property</button>
-          </form>
+              <div>
+                <label>Address <span class="required-symbol">*</span></label>
+                <input type="text" placeholder="Enter Address" required />
+              </div>
+
+              <div>
+                <label
+                  >Unit Number <span class="required-symbol">*</span></label
+                >
+                <input type="text" placeholder="Enter Unit" required />
+              </div>
+
+              <div>
+                <label>City <span class="required-symbol">*</span></label>
+                <select name="city">
+                  <option value="select-city">Select City</option>
+                  <option value="alameda">Alameda</option>
+                  <option value="berkeley">Berkeley</option>
+                  <option value="calistoga">Calistoga</option>
+                  <option value="fremont">Fremont</option>
+                </select>
+              </div>
+
+              <div>
+                <label>State <span class="required-symbol">*</span></label>
+                <select name="state">
+                  <option value="select-state">Select State</option>
+                  <option value="california">California</option>
+                  <option value="texas">Texas</option>
+                  <option value="florida">Florida</option>
+                  <option value="ohio">Ohio</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Room Type <span class="required-symbol">*</span></label>
+                <select name="room-type">
+                  <option value="select-room">Select Room Type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="condo">Condo</option>
+                  <option value="house">House</option>
+                  <option value="studio">Studio</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Price <span class="required-symbol">*</span></label>
+                <input type="number" placeholder="Enter Price" required />
+              </div>
+
+              <div>
+                <label>Room Type <span class="required-symbol">*</span></label>
+                <select name="room-type">
+                  <option value="select-room">Select Room Type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="condo">Condo</option>
+                  <option value="house">House</option>
+                  <option value="studio">Studio</option>
+                </select>
+              </div>
+
+              <div class="textarea-container">
+                <label
+                  >Description <span class="required-symbol">*</span></label
+                >
+                <textarea placeholder="Enter Description"></textarea>
+              </div>
+
+              <div class="image-upload-container">
+                <label>Upload Photos</label>
+                <div class="upload-image-wrapper">
+                  <p class="upload-headline">
+                    Drag your images here, or <span>browse</span>
+                  </p>
+                  <input type="file" name="filename" />
+                  <p class="upload-sub-headline">Supported: JPG, JPEG, PNG</p>
+                </div>
+              </div>
+
+              <button class="add-btn">Add New Property</button>
+            </form>
+          </div>
         </div>
       </section>
       <!--Form section ends here-->

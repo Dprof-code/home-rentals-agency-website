@@ -584,3 +584,159 @@ form {
   border: 0;
   cursor: pointer;
 }
+
+.order-section {
+  width: 100%;
+}
+
+.order-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-tagline {
+  text-align: center;
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: capitalize;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #000000;
+}
+
+.form-container {
+  background: #ffffff;
+  box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-headline {
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #f4511e;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  border: 0;
+  padding: 1.5rem;
+}
+
+form div {
+  flex: 0 0 calc(33.3% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+}
+
+.required-symbol {
+  color: var(--primaryColor);
+}
+
+.textarea-container {
+  flex: 0 0 100%;
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.image-upload-container {
+  flex: 0 0 100%;
+}
+
+.upload-image-wrapper {
+  background: rgba(244, 81, 30, 0.01);
+  border: 1px dashed #f4511e;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.upload-headline {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+.upload-headline span {
+  color: var(--primaryColor);
+}
+
+input[type="file"] {
+  border: 0;
+  outline: 0;
+  color: var(--primaryColor);
+  opacity: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.upload-sub-headline {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.add-btn {
+  flex: 0 0 50%;
+  margin: 0 auto;
+  background: #f4511e;
+  border-radius: 9.07965px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.7911px;
+  line-height: 25px;
+  letter-spacing: 0.181593px;
+  color: #ffffff;
+  padding: 0.8rem 0;
+  border: 0;
+  cursor: pointer;
+}
