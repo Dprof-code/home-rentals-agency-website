@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Project | Home Rentals Agency</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
     <script
       src="https://kit.fontawesome.com/a70a0df8ef.js"
       crossorigin="anonymous"
@@ -462,7 +466,7 @@
 
               <div>
                 <label>Price <span class="required-symbol">*</span></label>
-                <input type="number" placeholder="Enter Price" required />
+                <input class="price" placeholder="Enter Price" required />
               </div>
 
               <div>
@@ -487,9 +491,10 @@
                 <label>Upload Photos</label>
                 <div class="upload-image-wrapper">
                   <p class="upload-headline">
-                    Drag your images here, or <span>browse</span>
+                    Drag your images here, or
+                    <button id="file-select">browse</button>
+                    <input id="file-input" type="file" name="filename" />
                   </p>
-                  <input type="file" name="filename" />
                   <p class="upload-sub-headline">Supported: JPG, JPEG, PNG</p>
                 </div>
               </div>
@@ -502,45 +507,50 @@
       <!--Form section ends here-->
       <!--Reviews section starts here-->
       <section class="reviews">
-        <div class="feedback-container">
-          <blockquote class="feedback">
-            <span class="quote">"</span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel
-            pellentesque est. Curabitur at odio sit amet libero vulputate
-            efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa,
-            faucibus id pretium ac, mattis eu velit. Donec sed risus a lacus
-            fringilla finibus.
-          </blockquote>
-          <div class="client-details">
-            <div class="client-pics-container">
-              <img
-                src="/files/images/Ellipse 4.png"
-                class="client-profile-pics"
-                alt="a man"
-              />
+        <div class="reviews-container">
+          <div class="feedback-container">
+            <blockquote class="feedback">
+              <span class="quote">&QUOT;</span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel
+              pellentesque est. Curabitur at odio sit amet libero vulputate
+              efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa,
+              faucibus id pretium ac, mattis eu velit. Donec sed risus a lacus
+              fringilla finibus.
+            </blockquote>
+            <div class="client-details">
+              <div class="client-pics-container">
+                <img
+                  src="/files/images/Ellipse 4.png"
+                  class="client-profile-pics"
+                  alt="a man"
+                />
+              </div>
+              <div class="client-bio">
+                <h4 class="client-name">Harry Wilson</h4>
+                <h4 class="client-title">Property Owner</h4>
+              </div>
             </div>
-            <div class="client-bio">
-              <h4 class="client-name">Harry Wilson</h4>
-              <h4 class="client-title">Property Owner</h4>
+
+            <div id="swipe-buttons">
+              <button class="active-swipe-button" id="first-btn"></button>
+              <button id="second"></button>
+              <button id="third"></button>
             </div>
           </div>
 
-          <div id="swipe-buttons">
-            <button id="first"></button>
-            <button id="second"></button>
-            <button id="third"></button>
-          </div>
-        </div>
+          <div class="video-playback">
+            <video
+              class="video"
+              width="638"
+              height="590"
+              poster="/files/images/cover.jpg"
+            >
+              <source src="/files/video/video.mp4" type="video/mp4" />
+              Your browser does not support this video format
+            </video>
 
-        <div class="video-playback">
-          <img
-            class="cover-img"
-            src="/files/images/cover.jpg"
-            alt="cover-image"
-          />
-          <div class="play-icon-wrapper">
-            <i class="fas fa-play"></i>
+            <div class="play-btn-wrap"></div>
           </div>
         </div>
       </section>
@@ -586,6 +596,12 @@
           <li class="menu-item">PRIVACY POLICY</li>
           <li class="menu-item">DISCLAIMER</li>
         </ul>
+        <a
+          href="https://wakatime.com/badge/user/255a1e9f-e652-4b34-b3d8-07ca96938d4f/project/06c5780b-7091-468b-ac62-3b4d584454ee"
+          ><img
+            src="https://wakatime.com/badge/user/255a1e9f-e652-4b34-b3d8-07ca96938d4f/project/06c5780b-7091-468b-ac62-3b4d584454ee.svg"
+            alt="wakatime"
+        /></a>
         <p class="copyright">
           Copyright &copy; 2020 Minimum Living Cost. All Rights Reserved
         </p>

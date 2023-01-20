@@ -154,7 +154,6 @@ form {
 }
 
 .search-icon-wrapper {
-  width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 0px 5px 5px 0px;
   padding: 1.2rem;
@@ -587,6 +586,7 @@ form {
 
 .order-section {
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 .order-section-container {
@@ -610,9 +610,9 @@ form {
   background: #ffffff;
   box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-
   width: 70%;
   margin: 0 auto;
+  padding: 1.5rem 0;
 }
 
 .form-headline {
@@ -630,7 +630,6 @@ form {
 form {
   display: flex;
   flex-wrap: wrap;
-
   gap: 1rem;
   border: 0;
   padding: 1.5rem;
@@ -668,7 +667,7 @@ textarea {
   background: #f9f9f9;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 0 0.5rem 0.8rem;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -676,6 +675,10 @@ textarea {
   line-height: 28px;
   letter-spacing: 0.2px;
   color: #737373;
+}
+
+.price {
+  padding: 0.2rem 0 0.2rem 0.8rem;
 }
 
 .image-upload-container {
@@ -700,17 +703,28 @@ textarea {
   margin: 0;
 }
 
-.upload-headline span {
-  color: var(--primaryColor);
-}
-
 input[type="file"] {
   border: 0;
   outline: 0;
   color: var(--primaryColor);
-  opacity: 0;
   padding: 0;
   text-align: center;
+  display: none;
+}
+
+#file-select {
+  border: 0;
+  outline: 0;
+  background-color: var(--white);
+  color: var(--primaryColor);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
 }
 
 .upload-sub-headline {
@@ -739,4 +753,125 @@ input[type="file"] {
   padding: 0.8rem 0;
   border: 0;
   cursor: pointer;
+}
+
+.reviews {
+  width: 100%;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.feedback-container {
+  padding: 3.5rem 0;
+  background: rgba(244, 81, 30, 0.07);
+}
+
+.feedback {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 36px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+.quote {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  color: var(--primaryColor);
+  font-size: 100px;
+  z-index: -5;
+}
+
+.client-details {
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-name,
+.client-title {
+  margin: 0;
+}
+
+.client-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #f4511e;
+}
+
+.client-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+#swipe-buttons {
+  margin: 2rem 0 0 2.5rem;
+}
+
+#swipe-buttons > button {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.active-swipe-button {
+  background-color: var(--primaryColor);
+}
+
+.video-playback {
+  position: relative;
+}
+
+.video-playback::after {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  z-index: 1;
+}
+
+/** video::-moz-media-controls-play-button {
+  background-color: var(--primaryColor);
+}
+
+video::-webkit-media-controls-play-button {
+  background-color: var(--primaryColor);
+} **/
+
+.play-btn-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primaryColor);
+  z-index: 2;
 }
