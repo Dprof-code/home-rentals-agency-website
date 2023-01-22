@@ -33,7 +33,7 @@ header {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.5px solid #fff;
-  z-index: 3;
+  z-index: 4;
 }
 
 .menu-container {
@@ -57,6 +57,9 @@ header {
   padding-bottom: 1.2rem;
   position: absolute;
   top: 3rem;
+  z-index: 6;
+  cursor: pointer;
+  transition: all 500ms;
 }
 
 .fa-bars {
@@ -117,6 +120,7 @@ h1 {
   text-transform: capitalize;
   color: var(--white);
   width: 600px;
+  animation: header 3s;
 }
 
 .map {
@@ -874,4 +878,27 @@ video::-webkit-media-controls-play-button {
   border-radius: 50%;
   background-color: var(--primaryColor);
   z-index: 2;
+}
+
+footer {
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  top: 540vh;
+  left: 0;
+}
+
+/** Animations **/
+
+.menu-items:hover {
+  color: var(--primaryColor);
+}
+
+@keyframes header {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
