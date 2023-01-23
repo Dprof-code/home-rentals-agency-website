@@ -19,8 +19,12 @@ html {
   box-sizing: inherit;
 }
 
+body {
+}
+
 header {
   max-width: 1200px;
+  margin: 0 auto;
   color: var(--white);
   position: relative;
   display: flex;
@@ -28,9 +32,8 @@ header {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin: 0 auto;
   border-bottom: 0.5px solid #fff;
-  z-index: 3;
+  z-index: 4;
 }
 
 .menu-container {
@@ -52,9 +55,11 @@ header {
   text-align: center;
   width: 90px;
   padding-bottom: 1.2rem;
-
   position: absolute;
   top: 3rem;
+  z-index: 6;
+  cursor: pointer;
+  transition: all 500ms;
 }
 
 .fa-bars {
@@ -69,13 +74,16 @@ header {
 
 main {
   width: 100%;
-
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
 }
 
 .landing-page {
+  position: relative;
+  top: -90px;
+  right: 0;
+  left: 0;
   min-height: 100vh;
   background-image: url("/files/images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg");
   background-repeat: no-repeat;
@@ -83,12 +91,14 @@ main {
 }
 
 .landing-page::after {
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   content: " ";
   z-index: 1;
 }
@@ -98,8 +108,10 @@ main {
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
+  padding-top: 5%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   align-items: center;
   z-index: 3;
 }
@@ -113,11 +125,13 @@ h1 {
   letter-spacing: -1px;
   text-transform: capitalize;
   color: var(--white);
+  width: 600px;
+  animation: header 3s;
 }
 
 .map {
-  width: 408px;
-  height: 340px;
+  width: auto;
+  height: 320px;
   margin-bottom: 21px;
   box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
@@ -128,11 +142,12 @@ iframe {
 }
 
 form {
-  box-sizing: border-box;
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 15px;
+  box-sizing: border-box;
+  width: auto;
 }
 
 .search-drop {
@@ -143,21 +158,902 @@ form {
   line-height: 28px;
   letter-spacing: 0.2px;
   color: #252b42;
-  padding: 1rem;
+  padding: 1rem 0.4rem;
   box-sizing: border-box;
-  margin-right: 0;
   cursor: pointer;
 }
 
 .search-icon-wrapper {
   border: 1px solid #e6e6e6;
   border-radius: 0px 5px 5px 0px;
-
-  padding: 1rem;
+  padding: 1.2rem;
   background-color: #23a6f0;
 }
 
 .fa-search {
   cursor: pointer;
   color: var(--white);
+}
+
+.features {
+  position: relative;
+  top: -20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-header {
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 64px;
+  text-align: left;
+  text-transform: capitalize;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+.underline {
+  border-bottom: 3px solid #f4511e;
+}
+
+.features-contents {
+  padding-left: 0;
+  display: flex;
+}
+
+.features-card-container {
+  margin-top: 5%;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 0 0 calc(33.3%);
+}
+
+.feature-icon {
+  background: #ffffff;
+  box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 22px 20px;
+}
+
+.feature-headline {
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+.properties-list {
+  position: relative;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.properties-list-contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  /**padding: 60px 150px;**/
+  padding: 60px 0;
+}
+
+.properties-list-section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.properties-header {
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 64px;
+  text-transform: capitalize;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+  margin: 0;
+}
+
+.view {
+  float: right;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+  background: var(--primaryColor);
+  box-shadow: 0px 20px 13px rgba(248, 90, 71, 0.035),
+    0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
+    0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 34px;
+  border: 0;
+  outline: 0;
+}
+
+.properties-card-container {
+  margin: 2rem 0;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.property-card {
+  flex: 0 0 calc(33.3% - 1rem);
+  background: var(--white);
+  box-shadow: 0px 34.0693px 36.1986px rgba(0, 0, 0, 0.133714);
+  border-radius: 26.6166px;
+}
+
+.property-card-details {
+  padding: 0 1rem;
+}
+
+.property-image {
+  width: 100%;
+}
+
+.property-address {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: -0.642075px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.property-type {
+  margin-bottom: 0;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.642075px;
+  text-transform: capitalize;
+  color: #818181;
+}
+
+.property-price {
+  margin-top: 0;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25.552px;
+  line-height: 33px;
+  letter-spacing: -0.642075px;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+
+.fa-belt-alt {
+  color: red;
+}
+
+.property-features-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e4e4e4;
+}
+
+.property-feature {
+  border-right: 1px solid #e4e4e4;
+  flex: 0 0 calc(33.3% - 1rem);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.property-feature:last-of-type {
+  border: 0;
+}
+
+.property-feature h5 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18.0993px;
+  letter-spacing: -0.454803px;
+  color: #000000;
+}
+
+.fa-solid,
+.fas {
+  align-self: center;
+}
+
+#pagination {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: var(--white);
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#first,
+#next {
+  background: #f3f3f3;
+  border: 1px solid #bdbdbd;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+#first {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #bdbdbd;
+}
+
+#next {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #f4511e;
+}
+
+.pages {
+  display: block;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  align-self: auto;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  color: #f4511e;
+}
+
+.pages li {
+  height: 100%;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  flex: 0 0 33.3%;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+
+.active-clicked-page-btn {
+  background: #f4511e;
+  border: 1px solid #e9e9e9;
+  color: var(--white);
+}
+
+.benefits {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-cards-container {
+  position: relative;
+  flex: 0 0 50%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.benefits-cards {
+  position: relative;
+}
+
+.benefit-card-3,
+.benefit-card-4 {
+  align-self: flex-start;
+}
+
+.benefit-card-1::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "Flexible Leases";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 1rem;
+  border-radius: 20px;
+  height: 99%;
+}
+
+.benefit-card-2::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "7-Day Happiness Guaranteed";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 1rem;
+  border-radius: 20px;
+  height: 99%;
+}
+
+.benefit-card-3::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "Monthly House Cleaning";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 1rem;
+  border-radius: 20px;
+  height: 99%;
+}
+
+.benefit-card-4::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "Choose Your Own Roommate";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 1rem;
+  border-radius: 20px;
+  height: 99%;
+}
+
+.benefits-header-container {
+  align-self: center;
+  flex: 0 0 40%;
+}
+
+.benefits-headline {
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 54px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+.benefits-desc {
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+.search {
+  background: var(--primaryColor);
+  border-radius: 13px;
+  padding: 1rem;
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #ffffff;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.order-section {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.order-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-tagline {
+  text-align: center;
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: capitalize;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #000000;
+}
+
+.form-container {
+  background: #ffffff;
+  box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.form-headline {
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #f4511e;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 0;
+  padding: 1.5rem;
+}
+
+form div {
+  flex: 0 0 calc(33.3% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+}
+
+.required-symbol {
+  color: var(--primaryColor);
+}
+
+.textarea-container {
+  flex: 0 0 100%;
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 0.5rem 0 0.5rem 0.8rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.price {
+  padding: 0.2rem 0 0.2rem 0.8rem;
+}
+
+.image-upload-container {
+  flex: 0 0 100%;
+}
+
+.upload-image-wrapper {
+  background: rgba(244, 81, 30, 0.01);
+  border: 1px dashed #f4511e;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.upload-headline {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+input[type="file"] {
+  border: 0;
+  outline: 0;
+  color: var(--primaryColor);
+  padding: 0;
+  text-align: center;
+  display: none;
+}
+
+#file-select {
+  border: 0;
+  outline: 0;
+  background-color: var(--white);
+  color: var(--primaryColor);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.upload-sub-headline {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.add-btn {
+  flex: 0 0 50%;
+  margin: 0 auto;
+  background: #f4511e;
+  border-radius: 9.07965px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21.7911px;
+  line-height: 25px;
+  letter-spacing: 0.181593px;
+  color: #ffffff;
+  padding: 0.8rem 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.reviews {
+  width: 100%;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.feedback-container {
+  padding: 3.5rem 0;
+  background: rgba(244, 81, 30, 0.07);
+}
+
+.feedback {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 36px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+.fa-quote-left {
+  position: absolute;
+  top: -15px;
+  left: -30px;
+  color: var(--primaryColor);
+  font-size: 50px;
+  z-index: -5;
+}
+
+.client-details {
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-name,
+.client-title {
+  margin: 0;
+}
+
+.client-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #f4511e;
+}
+
+.client-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #18191f;
+}
+
+#swipe-buttons {
+  margin: 2rem 0 0 2.5rem;
+}
+
+#swipe-buttons > button {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.active-swipe-button {
+  background-color: var(--primaryColor);
+}
+
+.video-playback {
+  position: relative;
+}
+
+.video-playback::after {
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  z-index: 1;
+}
+
+/** video::-moz-media-controls-play-button {
+  background-color: var(--primaryColor);
+}
+
+video::-webkit-media-controls-play-button {
+  background-color: var(--primaryColor);
+} **/
+
+.play-btn-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primaryColor);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-play {
+  color: var(--white);
+}
+
+footer {
+  width: 100%;
+}
+
+.footer-contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 3rem 5rem;
+  border-top: 2px solid var(--primaryColor);
+}
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-details {
+  align-self: center;
+}
+
+.logo {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 70px;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.material-symbols-outlined {
+  color: var(--primaryColor);
+  margin-right: 0.5rem;
+}
+
+.contact-address {
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0a142f;
+}
+
+.contact-address p:nth-child(2) {
+  display: inline;
+  margin-right: 3rem;
+}
+
+.contact-address p:nth-child(3) {
+  display: inline;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 2rem;
+}
+
+.socials-headline {
+  margin: 0;
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0a142f;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.fab,
+.fa-rss {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #0a142f;
+  border-top: 2px solid #f4511e;
+  mix-blend-mode: normal;
+  margin-top: 2rem;
+}
+
+.menu-items-container {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.menu-items-container .menu-item {
+  list-style: none;
+}
+
+.copyright {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #0a142f;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+/** Animations **/
+
+@keyframes logo-anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu-items:hover {
+  color: var(--primaryColor);
+}
+
+@keyframes header {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logo {
+  animation: logo-anime 2s;
+}
+
+@keyframes map-anime {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.map-container {
+  animation: map-anime 2s;
 }
