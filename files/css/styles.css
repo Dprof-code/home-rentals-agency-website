@@ -20,9 +20,18 @@ html {
 }
 
 body {
+  margin: 0;
+  width: 100%;
+  position: relative;
 }
 
 header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 5;
+}
+
+.header-contents {
   max-width: 1200px;
   margin: 0 auto;
   color: var(--white);
@@ -106,12 +115,11 @@ main {
 .landing-page-contents {
   position: relative;
   max-width: 1200px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   padding-top: 5%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   align-items: center;
   z-index: 3;
 }
@@ -125,7 +133,7 @@ h1 {
   letter-spacing: -1px;
   text-transform: capitalize;
   color: var(--white);
-  width: 600px;
+  max-width: 600px;
   animation: header 3s;
 }
 
@@ -177,7 +185,7 @@ form {
 
 .features {
   position: relative;
-  top: -20px;
+  top: -50px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -205,7 +213,7 @@ form {
 
 .features-card-container {
   margin-top: 5%;
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -354,7 +362,7 @@ form {
 
 .property-feature {
   border-right: 1px solid #e4e4e4;
-  flex: 0 0 calc(33.3% - 1rem);
+  flex: 0 0 calc(30% - 1rem);
   display: flex;
   justify-content: space-evenly;
 }
@@ -383,10 +391,10 @@ form {
   left: 50%;
   background-color: var(--white);
   width: 30%;
-  height: 100%;
+  max-height: 80px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 
 #first,
@@ -395,6 +403,7 @@ form {
   border: 1px solid #bdbdbd;
   padding: 25px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 #first {
@@ -420,19 +429,21 @@ form {
 }
 
 .pages {
-  display: block;
   list-style: none;
   width: 100%;
   height: 100%;
-  align-self: auto;
   display: flex;
-  justify-content: center;
+  align-items: stretch;
   padding-left: 0;
   color: #f4511e;
+  margin-top: 0;
+  cursor: pointer;
 }
 
 .pages li {
   height: 100%;
+  align-items: stretch;
+  align-self: stretch;
   text-align: center;
   font-family: "Montserrat";
   font-style: normal;
@@ -442,6 +453,7 @@ form {
   flex: 0 0 33.3%;
   text-align: center;
   letter-spacing: 0.1px;
+  padding: 28px 0;
 }
 
 .active-clicked-page-btn {
@@ -1056,4 +1068,234 @@ footer {
 
 .map-container {
   animation: map-anime 2s;
+}
+
+button {
+  transition: all 1s;
+}
+
+button:hover {
+  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor);
+  background-color: var(--white);
+}
+
+.property-image {
+  transition: all 1s;
+}
+
+.property-image:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.benefit-card-1 {
+  animation: benefit-card-1-anime 2s ease-out;
+}
+
+@keyframes benefit-card-1-anime {
+  0% {
+    transform: translateY(-1000px) rotateZ(-30deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.benefit-card-2 {
+  animation: benefit-card-2-anime 2s ease-out;
+}
+
+@keyframes benefit-card-2-anime {
+  0% {
+    transform: translateX(1000px) rotateZ(30deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.benefit-card-3 {
+  animation: benefit-card-3-anime 3s ease-out;
+}
+
+@keyframes benefit-card-3-anime {
+  0% {
+    transform: translateY(1000px) rotateZ(90deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.benefit-card-4 {
+  animation: benefit-card-4-anime 2s ease-out;
+}
+
+@keyframes benefit-card-4-anime {
+  0% {
+    transform: translateX(-1000px) rotateZ(90deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/** Responsiveness stylings **/
+
+/** Mobile **/
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  .header-contents {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .fa-bars {
+    visibility: visible;
+  }
+
+  .landing-page-contents {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    top: 67px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  .map {
+    margin-top: 1rem;
+    height: 250px;
+  }
+
+  form {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  .features {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .featured-image {
+    width: 100%;
+  }
+
+  .features-header {
+    margin-top: 0;
+  }
+
+  .features-contents {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .features-card-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .feature-card {
+    flex: 0 0 calc(50%);
+  }
+
+  .feature-headline {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .properties-list-contents {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .properties-card-container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .properties-header {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .view {
+    float: right;
+    line-height: 1rem;
+    padding: 0 1rem;
+  }
+
+  #pagination {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .benefits {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .benefits-cards-container {
+    flex: 0 0 100%;
+  }
+
+  .benefits-cards {
+    flex: 0 0 50%;
+  }
+
+  .benefits-header-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .form-container {
+    width: 80%;
+  }
+
+  form div {
+    flex: 0 0 100%;
+  }
+
+  .add-btn {
+    flex: 0 0 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  .video-playback {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .contact-us {
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+  }
+
+  .menu-items-container {
+    flex-direction: column;
+  }
+}
+
+/** Tablet **/
+@media screen and (max-width: 768px) {
 }
