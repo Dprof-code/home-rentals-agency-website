@@ -291,7 +291,7 @@ form {
 
 .properties-card-container {
   margin: 2rem 0;
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -299,7 +299,7 @@ form {
 }
 
 .property-card {
-  flex: 0 0 calc(33.3% - 1rem);
+  flex: 0 0 calc(30% - 1rem);
   background: var(--white);
   box-shadow: 0px 34.0693px 36.1986px rgba(0, 0, 0, 0.133714);
   border-radius: 26.6166px;
@@ -971,7 +971,6 @@ footer {
 .socials {
   display: flex;
   justify-content: space-around;
-
   margin-top: 2rem;
 }
 
@@ -985,6 +984,12 @@ footer {
   color: #0a142f;
   mix-blend-mode: normal;
   opacity: 0.5;
+}
+
+.social-icons {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .fab,
@@ -1016,6 +1021,11 @@ footer {
 
 .menu-items-container .menu-item {
   list-style: none;
+}
+
+.menu-items-container .menu-item a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .copyright {
@@ -1182,6 +1192,14 @@ button:hover {
     margin-bottom: 0;
   }
 
+  .search-drop {
+    padding: 1rem 0.2rem;
+  }
+
+  .search-icon-wrapper {
+    padding: 1rem 0.8rem;
+  }
+
   .features {
     width: 80%;
     margin: 0 auto;
@@ -1287,15 +1305,98 @@ button:hover {
     flex-direction: column;
   }
 
+  .socials {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .footer-menu {
     flex-direction: column;
   }
 
   .menu-items-container {
     flex-direction: column;
+    align-items: center;
   }
 }
 
-/** Tablet **/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .header-contents {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .landing-page-contents {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    width: 40%;
+    font-size: 3rem;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  .features {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .features-contents {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .properties-list-contents {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .properties-card-container {
+    justify-content: space-evenly;
+  }
+
+  .property-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  #pagination {
+    width: 50%;
+  }
+
+  .benefits {
+    max-width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-cards-container {
+    flex: 0 0 100%;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    gap: 0;
+  }
+
+  .benefits-cards {
+    position: relative;
+    flex: 0 0 50%;
+  }
+
+  .benefit-card-1,
+  .benefit-card-2 {
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
 }
