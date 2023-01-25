@@ -871,7 +871,7 @@ input[type="file"] {
   position: relative;
 }
 
-.video-playback::after {
+/** .video-playback::after {
   position: absolute;
   background-color: black;
   opacity: 0.5;
@@ -882,7 +882,7 @@ input[type="file"] {
   content: "";
   z-index: 1;
 }
-
+ **/
 /** video::-moz-media-controls-play-button {
   background-color: var(--primaryColor);
 }
@@ -1098,57 +1098,132 @@ button:hover {
   transform: scale(1.2, 1.2);
 }
 
-.benefit-card-1 {
-  animation: benefit-card-1-anime 2s ease-out;
-}
-
-@keyframes benefit-card-1-anime {
-  0% {
-    transform: translateY(-1000px) rotateZ(-30deg);
+@media screen and (min-width: 600px) {
+  .benefit-card-1 {
+    animation: benefit-card-1-anime 2s ease-out forwards;
   }
-  100% {
+
+  @keyframes benefit-card-1-anime {
+    0% {
+      transform: translateY(-1000px) rotateZ(-30deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .benefit-card-2 {
+    animation: benefit-card-2-anime 2s ease-out;
+  }
+
+  @keyframes benefit-card-2-anime {
+    0% {
+      transform: translateX(1000px) rotateZ(30deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .benefit-card-3 {
+    animation: benefit-card-3-anime 3s ease-out;
+  }
+
+  @keyframes benefit-card-3-anime {
+    0% {
+      transform: translateY(1000px) rotateZ(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .benefit-card-4 {
+    animation: benefit-card-4-anime 2s ease-out;
+  }
+
+  @keyframes benefit-card-4-anime {
+    0% {
+      transform: translateX(-1000px) rotateZ(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .benefits.hide {
+    display: none;
+  }
+
+  .benefits.show {
+    display: flex;
+  }
+
+  .benefits-header-container {
+    animation: benefits-header-anime 2s ease-in 1s;
+  }
+
+  @keyframes benefits-header-anime {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .show-properties-anime {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+
+  .show-properties-anime.active {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
-.benefit-card-2 {
-  animation: benefit-card-2-anime 2s ease-out;
+.featured-image {
+  animation: featured-image-anime 2s ease-out;
 }
 
-@keyframes benefit-card-2-anime {
+@keyframes featured-image-anime {
   0% {
-    transform: translateX(1000px) rotateZ(30deg);
+    transform: skew(0) translateX(-200px);
+  }
+  50% {
+    transform: skew(20deg);
   }
   100% {
-    transform: translateX(0);
+    transform: skew(-20deg) translateX(0);
   }
 }
 
-.benefit-card-3 {
-  animation: benefit-card-3-anime 3s ease-out;
+.feature-icon {
+  animation: feature-icon-anime 500ms ease-in;
 }
 
-@keyframes benefit-card-3-anime {
+@keyframes feature-icon-anime {
   0% {
-    transform: translateY(1000px) rotateZ(90deg);
+    transform: scale(0.2, 0.2);
+    opacity: 0.2;
   }
   100% {
-    transform: translateY(0);
+    transform: scale(1, 1);
+    opacity: 1;
   }
 }
 
-.benefit-card-4 {
-  animation: benefit-card-4-anime 2s ease-out;
-}
-
-@keyframes benefit-card-4-anime {
-  0% {
-    transform: translateX(-1000px) rotateZ(90deg);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 /** Responsiveness stylings **/
 
 /** Mobile **/
@@ -1176,8 +1251,8 @@ button:hover {
   }
 
   h1 {
-    font-size: 2.5rem;
-    line-height: 1;
+    width: 100% !important;
+    font-size: 2rem;
     margin-top: 0;
     margin-bottom: 3rem;
   }
@@ -1305,10 +1380,22 @@ button:hover {
     flex-direction: column;
   }
 
+  .contact-address p:nth-child(2) {
+    display: block;
+  }
+
+  .contact-address p:nth-child(3) {
+    display: block;
+  }
+
   .socials {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .social-icons {
+    width: 100%;
   }
 
   .footer-menu {
@@ -1319,9 +1406,17 @@ button:hover {
     flex-direction: column;
     align-items: center;
   }
+
+  .menu-item a {
+    transition: all 1s;
+  }
+
+  .menu-item a:hover {
+    color: var(--primaryColor);
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   nav {
     display: none;
   }
@@ -1385,13 +1480,16 @@ button:hover {
     align-items: center;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
-    gap: 0;
+    gap: 1rem;
   }
 
   .benefits-cards {
     position: relative;
-    flex: 0 0 50%;
+    flex: 0 0 40%;
+  }
+
+  .benefits-card-image {
+    width: 100%;
   }
 
   .benefit-card-1,
@@ -1399,4 +1497,92 @@ button:hover {
     align-self: flex-end;
     justify-self: flex-end;
   }
+
+  form div {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .reviews-container {
+    flex-direction: column-reverse;
+  }
+
+  .video {
+    width: 100%;
+  }
+}
+
+/** Navigation styling **/
+
+@media screen and (max-width: 900px) {
+  .nav-btn-wrap {
+    z-index: 10;
+  }
+  nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 44px;
+    bottom: 0;
+    background-color: black;
+  }
+
+  #menu-icon {
+    cursor: pointer;
+  }
+
+  .open-nav {
+    display: flex;
+  }
+  .active {
+    border-bottom: none;
+  }
+
+  .menu-container {
+    height: 80%;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .menu-items {
+    position: relative;
+  }
+
+  nav ul li:nth-child(1) {
+    opacity: 0;
+    animation: menu-items-anime 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  nav ul li:nth-child(2) {
+    opacity: 0;
+    animation: menu-items-anime 2s ease-in 200ms;
+    animation-fill-mode: forwards;
+  }
+
+  nav ul li:nth-child(3) {
+    opacity: 0;
+    animation: menu-items-anime 2s ease-in 400ms;
+    animation-fill-mode: forwards;
+  }
+
+  nav ul li:nth-child(4) {
+    opacity: 0;
+    animation: menu-items-anime 2s ease-in 600ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes menu-items-anime {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /** Animations **/
 }
