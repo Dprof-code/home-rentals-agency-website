@@ -1585,4 +1585,16 @@ button:hover {
   }
 
   /** Animations **/
+
+  .show-properties-anime {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+
+  .show-properties-anime.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
