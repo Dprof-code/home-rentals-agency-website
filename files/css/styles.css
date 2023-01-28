@@ -1525,9 +1525,6 @@ button:hover {
 /** Navigation styling **/
 
 @media screen and (max-width: 900px) {
-  body {
-    overflow: hidden;
-  }
   .nav-btn-wrap {
     z-index: 10;
   }
@@ -1544,7 +1541,7 @@ button:hover {
   }
 
   nav::after {
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     position: absolute;
     top: 0;
