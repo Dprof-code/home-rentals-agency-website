@@ -7,46 +7,6 @@ fileSelectBtn.addEventListener("click", function click() {
   fileInput.click();
 });
 
-//Properties list section animations
-
-function showProperties() {
-  var showProperty = document.querySelectorAll(".show-properties-anime");
-
-  for (var i = 0; i < showProperty.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = showProperty[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      showProperty[i].classList.add("active");
-    } else {
-      showProperty[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", showProperties);
-
-//Benefits section animations
-
-function showBenefits() {
-  var showBenefits = document.querySelectorAll(".benefits");
-
-  for (var i = 0; i < showBenefits.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = showBenefits[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      showBenefits[i].classList.add("show");
-    } else {
-      showBenefits[i].classList.remove("show");
-    }
-  }
-}
-
-window.addEventListener("scroll", showBenefits);
-
 // Navigation
 let nav = document.getElementById("nav");
 let menuIconWrap = document.getElementById("nav-icon-container");

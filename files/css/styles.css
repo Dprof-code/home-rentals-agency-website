@@ -663,7 +663,7 @@ form {
 }
 
 form div {
-  flex: 0 0 calc(33.3% - 1rem);
+  flex: 0 0 calc(33.33% - 1rem);
   display: flex;
   flex-direction: column;
 }
@@ -1100,12 +1100,12 @@ button:hover {
 
 @media screen and (min-width: 600px) {
   .benefit-card-1 {
-    animation: benefit-card-1-anime 2s ease-out forwards;
+    animation: benefit-card-1-anime 1s ease-out forwards;
   }
 
   @keyframes benefit-card-1-anime {
     0% {
-      transform: translateY(-1000px) rotateZ(-30deg);
+      transform: translateY(-250px) rotateZ(-30deg);
       opacity: 0;
     }
     100% {
@@ -1115,12 +1115,12 @@ button:hover {
   }
 
   .benefit-card-2 {
-    animation: benefit-card-2-anime 2s ease-out;
+    animation: benefit-card-2-anime 1s ease-out;
   }
 
   @keyframes benefit-card-2-anime {
     0% {
-      transform: translateX(1000px) rotateZ(30deg);
+      transform: translateX(250px) rotateZ(30deg);
       opacity: 0;
     }
     100% {
@@ -1130,12 +1130,12 @@ button:hover {
   }
 
   .benefit-card-3 {
-    animation: benefit-card-3-anime 3s ease-out;
+    animation: benefit-card-3-anime 2s ease-out;
   }
 
   @keyframes benefit-card-3-anime {
     0% {
-      transform: translateY(1000px) rotateZ(90deg);
+      transform: translateY(250px) rotateZ(90deg);
       opacity: 0;
     }
     100% {
@@ -1150,7 +1150,7 @@ button:hover {
 
   @keyframes benefit-card-4-anime {
     0% {
-      transform: translateX(-1000px) rotateZ(90deg);
+      transform: translateX(-250px) rotateZ(90deg);
       opacity: 0;
     }
     100% {
@@ -1312,6 +1312,11 @@ button:hover {
     margin: 0 auto;
   }
 
+  .properties-list-section-header {
+    display: flex;
+    align-items: center;
+  }
+
   .properties-card-container {
     max-width: 100%;
     flex-direction: column;
@@ -1325,7 +1330,8 @@ button:hover {
   .view {
     float: right;
     line-height: 1rem;
-    padding: 0 1rem;
+    padding: 1rem;
+    font-size: 12px;
   }
 
   #pagination {
@@ -1341,10 +1347,15 @@ button:hover {
 
   .benefits-cards-container {
     flex: 0 0 100%;
+    display: flex;
   }
 
   .benefits-cards {
-    flex: 0 0 50%;
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .benefits-card-image {
+    width: 100%;
   }
 
   .benefits-header-container {
@@ -1514,6 +1525,9 @@ button:hover {
 /** Navigation styling **/
 
 @media screen and (max-width: 900px) {
+  body {
+    overflow: hidden;
+  }
   .nav-btn-wrap {
     z-index: 10;
   }
@@ -1526,6 +1540,29 @@ button:hover {
     left: 44px;
     bottom: 0;
     background-color: black;
+    animation: menu-slide 800ms ease-in-out;
+  }
+
+  nav::after {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -25%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    content: " ";
+    z-index: -3;
+  }
+
+  @keyframes menu-slide {
+    0% {
+      transform: translateX(500px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   #menu-icon {
@@ -1549,52 +1586,5 @@ button:hover {
 
   .menu-items {
     position: relative;
-  }
-
-  nav ul li:nth-child(1) {
-    opacity: 0;
-    animation: menu-items-anime 2s ease-in;
-    animation-fill-mode: forwards;
-  }
-
-  nav ul li:nth-child(2) {
-    opacity: 0;
-    animation: menu-items-anime 2s ease-in 200ms;
-    animation-fill-mode: forwards;
-  }
-
-  nav ul li:nth-child(3) {
-    opacity: 0;
-    animation: menu-items-anime 2s ease-in 400ms;
-    animation-fill-mode: forwards;
-  }
-
-  nav ul li:nth-child(4) {
-    opacity: 0;
-    animation: menu-items-anime 2s ease-in 600ms;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes menu-items-anime {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /** Animations **/
-
-  .show-properties-anime {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 2s all ease;
-  }
-
-  .show-properties-anime.active {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
