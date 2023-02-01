@@ -23,12 +23,14 @@ This is a simple portfolio project and its also inspired by a Twitter code chall
 
 ### Screenshot
 
-![](./images/desktop-view.jpg)
+![](./files/images/desktop-view.png)
+![](./files/images/mobile-view.png)
+![](./files/images/mobile-menu-open-view.png)
 
 ### Links
 
-- Code Repo URL: [https://github.com/Dprof-code/home-rentals-agency-website]
-- Live Site URL: [https://rentals-hub.netlify.app]
+- [Code Repo URL](https://github.com/Dprof-code/home-rentals-agency-website)
+- [Live Site URL](https://rentals-hub.netlify.app)
 
 ## My process
 
